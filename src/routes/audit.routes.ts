@@ -1,6 +1,6 @@
 import { Router } from 'express';
-import * as auditController from '@/controllers/audit.controller';
-import { isAuthenticated, isAdmin } from '@/middleware/auth.middleware';
+import * as auditController from '../controllers/audit.controller';
+import { isAuthenticated, isAdmin } from '../middleware/auth.middleware';
 
 const router = Router();
 

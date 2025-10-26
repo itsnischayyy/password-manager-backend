@@ -1,9 +1,9 @@
 import { Response, NextFunction } from 'express';
 import * as jwt from 'jsonwebtoken'; // Corrected import
-import config from '@/config';
-import { AppError } from '@/utils/AppError';
-import { User } from '@/models/User.model';
-import { AuthenticatedRequest } from '@/types';
+import config from '../config';
+import { AppError } from '../utils/AppError';
+import { User } from '../models/User.model';
+import { AuthenticatedRequest } from '../types';
 
 export const isAuthenticated = async (req: AuthenticatedRequest, res: Response, next: NextFunction) => {
   let token;

@@ -1,5 +1,5 @@
 import { rateLimit } from 'express-rate-limit';
-import config from '@/config';
+import config from '../config';
 
 // General rate limiter for most API endpoints
 export const rateLimiter = rateLimit({

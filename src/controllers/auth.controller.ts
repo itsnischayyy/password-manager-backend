@@ -1,8 +1,8 @@
 import { Request, Response, NextFunction } from 'express';
-import * as authService from '@/services/auth.service';
-import config from '@/config';
-import { AppError } from '@/utils/AppError';
-import { AuthenticatedRequest } from '@/types';
+import * as authService from '../services/auth.service';
+import config from '../config';
+import { AppError } from '../utils/AppError';
+import { AuthenticatedRequest } from '../types';
 
 // Wrapper to handle async functions and pass errors to the error handler
 const asyncHandler = (fn: Function) => (req: Request, res: Response, next: NextFunction) =>

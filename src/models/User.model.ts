@@ -1,5 +1,5 @@
 import { Schema, model, Document } from 'mongoose';
-import { WrappedKey } from '@/types';
+import { WrappedKey } from '../types';
 
 // New interface for PBKDF2 parameters
 export interface PBKDF2Params {

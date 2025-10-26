@@ -1,4 +1,4 @@
-import { AuditLog, IAuditLog, AuditAction, AuditOutcome } from '@/models/AuditLog.model';
+import { AuditLog, IAuditLog, AuditAction, AuditOutcome } from '../models/AuditLog.model';
 import { Types } from 'mongoose';
 
 interface CreateAuditLogPayload {

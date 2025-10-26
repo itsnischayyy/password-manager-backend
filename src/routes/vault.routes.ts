@@ -1,9 +1,9 @@
 import { Router } from 'express';
-import * as vaultController from '@/controllers/vault.controller';
-import { isAuthenticated } from '@/middleware/auth.middleware';
-import { validateRequest } from '@/middleware/validateRequest';
-import { createVaultItemSchema, updateVaultItemSchema } from '@/validators/vault.validators';
-import { objectIdParamSchema } from '@/validators/common.validators';
+import * as vaultController from '../controllers/vault.controller';
+import { isAuthenticated } from '../middleware/auth.middleware';
+import { validateRequest } from '../middleware/validateRequest';
+import { createVaultItemSchema, updateVaultItemSchema } from '../validators/vault.validators';
+import { objectIdParamSchema } from '../validators/common.validators';
 
 const router = Router();
 

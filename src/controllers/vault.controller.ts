@@ -1,6 +1,6 @@
 import { Response, NextFunction } from 'express';
-import * as vaultService from '@/services/vault.service';
-import { AuthenticatedRequest } from '@/types';
+import * as vaultService from '../services/vault.service';
+import { AuthenticatedRequest } from '../types';
 
 const asyncHandler = (fn: Function) => (req: AuthenticatedRequest, res: Response, next: NextFunction) =>
   Promise.resolve(fn(req, res, next)).catch(next);

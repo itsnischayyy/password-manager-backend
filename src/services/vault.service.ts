@@ -1,6 +1,6 @@
-import { VaultItem, IVaultItem } from '@/models/VaultItem.model';
-import { AppError } from '@/utils/AppError';
-import { CreateVaultItemPayload, UpdateVaultItemPayload } from '@/types';
+import { VaultItem, IVaultItem } from '../models/VaultItem.model';
+import { AppError } from '../utils/AppError';
+import { CreateVaultItemPayload, UpdateVaultItemPayload } from '../types';
 import { Types } from 'mongoose';
 import { createAuditLog } from './audit.service';
 

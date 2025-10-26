@@ -1,8 +1,8 @@
 import { Request } from 'express';
 import { z } from 'zod';
-import { registerSchema, loginSchema } from '@/validators/auth.validators';
-import { createVaultItemSchema, updateVaultItemSchema } from '@/validators/vault.validators';
-import { IUser } from '@/models/User.model';
+import { registerSchema, loginSchema } from '../validators/auth.validators';
+import { createVaultItemSchema, updateVaultItemSchema } from '../validators/vault.validators';
+import { IUser } from '../models/User.model';
 
 // Zod-inferred types
 export type RegisterPayload = z.infer<typeof registerSchema>;

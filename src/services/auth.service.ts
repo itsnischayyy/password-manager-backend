@@ -2,11 +2,11 @@ import * as crypto from 'crypto'; // Import the entire module
 import { promisify } from 'util';
 import * as jwt from 'jsonwebtoken';
 import { authenticator } from 'otplib';
-import { User, IUser } from '@/models/User.model';
-import { RefreshToken, IRefreshToken } from '@/models/RefreshToken.model';
-import { AppError } from '@/utils/AppError';
-import config from '@/config';
-import { LoginPayload, RegisterPayload, UserPublicProfile, SessionInfo } from '@/types';
+import { User, IUser } from '../models/User.model';
+import { RefreshToken, IRefreshToken } from '../models/RefreshToken.model';
+import { AppError } from '../utils/AppError';
+import config from '../config';
+import { LoginPayload, RegisterPayload, UserPublicProfile, SessionInfo } from '../types';
 import { createAuditLog } from './audit.service';
 import { Types } from 'mongoose';
 

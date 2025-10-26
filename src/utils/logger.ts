@@ -1,6 +1,6 @@
 import pino from 'pino';
 import pinoHttp from 'pino-http';
-import config from '@/config';
+import config from '../config';
 
 const transport = config.nodeEnv === 'development' ? {
   target: 'pino-pretty',
