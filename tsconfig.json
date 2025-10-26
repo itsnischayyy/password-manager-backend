@@ -1,0 +1,15 @@
+{
+  "extends": "./tsconfig.base.json",
+  "compilerOptions": {
+    "outDir": "./dist",
+    "rootDir": "./src",
+    "moduleResolution": "node",
+    "sourceMap": true, // Important for --enable-source-maps
+    "baseUrl": "./src", // Tells tsconfig-paths the base for aliases
+    "paths": {
+      "@/*": ["*"] // The alias definition
+    }
+  },
+  "include": ["src/**/*.ts"],
+  "exclude": ["node_modules", "src/tests"]
+}
