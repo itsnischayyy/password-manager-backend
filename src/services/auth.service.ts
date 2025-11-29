@@ -247,6 +247,18 @@ export const generate2FATempToken = (userId: string): string => {
     return jwt.sign({ id: userId, purpose: '2fa-verification' }, config.accessTokenSecret, { expiresIn: '5m' });
 };
 
+export const getVaultKeyData = async (userId: string | Types.ObjectId) => {
+  const user = await User.findById(userId);
+  if (!user) {
+    throw new AppError('User not found', 404);
+  }
+
+  return {
+    saltForKEK: user.keys.saltForKEK,
+    wrappedVK: user.keys.wrappedVK,
+  };
+};
+
 export const verify2FAForLogin = async (tempToken: string, twoFactorToken: string, ip?: string, userAgent?: string) => {
     let decoded: { id: string };
     try {

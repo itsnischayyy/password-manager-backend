@@ -26,5 +26,7 @@ router.post('/2fa/enable', isAuthenticated, validateRequest({ body: enable2FASch
 router.post('/2fa/verify', validateRequest({ body: verify2FASchema }), authController.verify2FA); // Used during login
 router.post('/2fa/disable', isAuthenticated, authController.disable2FA);
 
+// Vault key data endpoint for unlocking vault after page refresh
+router.get('/vault-key-data', isAuthenticated, authController.getVaultKeyData);
 
 export default router;

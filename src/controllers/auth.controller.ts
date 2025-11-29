@@ -114,3 +114,8 @@ export const disable2FA = asyncHandler(async (req: AuthenticatedRequest, res: Re
   await authService.disable2FAForUser(req.user!.id);
   res.status(200).json({ message: '2FA disabled successfully.' });
 });
+
+export const getVaultKeyData = asyncHandler(async (req: AuthenticatedRequest, res: Response) => {
+  const vaultKeyData = await authService.getVaultKeyData(req.user!.id);
+  res.status(200).json(vaultKeyData);
+});
